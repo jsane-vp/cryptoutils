@@ -1,0 +1,15 @@
+  C# implementation of AES counter mode with authentication
+  This code can be made more tighter and perhaps optimized at places.
+  I have erred on side of correctness & safety than using any unsafe optimizations
+  since I am not a C# expert.
+  Also missing are some defensive validation checks at places.
+
+  The authentication support is not perfect but should be a reasonable
+  compromise. It should discourage most casual chosen-plaintext attacks.
+  See comments in ComputeHmac method.
+
+  One motivation was to have an easier to use implementation than
+  say .Net's AesCcm which requires caller to keep track of the nonce
+  which must be unique for every piece of data and the tags.   
+  The generated cipher text is self contained. One just needs to 
+  instantiate the class with a key and an IV.
