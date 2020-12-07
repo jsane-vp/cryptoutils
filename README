@@ -13,3 +13,12 @@
   which must be unique for every piece of data and the tags.   
   The generated cipher text is self contained. One just needs to 
   instantiate the class with a key and an IV.
+
+Update Dec 5 2020
+-----------------
+
+Also adding C# and Java versions of classes with same functionality but
+leveraging Bouncy Castle's AES counter mode implementation to avoid
+duplicating it like in the earlier C# version using .Net's CSPs. 
+
+
